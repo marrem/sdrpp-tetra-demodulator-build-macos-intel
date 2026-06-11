@@ -17,7 +17,7 @@ mkdir $CODECDIR
 if [ ! -f $LOCAL_FILE ]; then
 	echo Downloading $URL ...
 # 	wget -O $LOCAL_FILE $URL
-	curl -kLSs $URL -o $LOCAL_FILE
+	curl -H "User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:150.0) Gecko/20100101 Firefox/150.0" -kLSs $URL -o $LOCAL_FILE
 else
 	echo Skipping download, file $LOCAL_FILE exists
 fi
